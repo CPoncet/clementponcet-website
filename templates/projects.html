@@ -1,0 +1,33 @@
+{% extends "base.html" %} {% block content %}
+
+<section class="inner-hero">
+  <div class="container">
+    <h1>Mes projets</h1>
+  </div>
+</section>
+
+<section class="projects container">
+  <h2>Liste des projets</h2>
+  <p>
+    Voici une liste non exhaustive des projets sur lesquels j'ai été amené à
+    travailler. Certains organismes sont nommés directement, mais d'autres ne le
+    sont pas pour des raisons de confidentialité. Ce panorama vous permet
+    d'appréhender mes compétences.
+  </p>
+  <div class="projects-list">
+    {% set projects = get_section(path="projects/_index.md") %} {% for page in
+    projects.pages %}
+    <a href="{{ page.permalink | safe }}">
+      <article>
+        <img src="{{ get_url(path="img/projects/") }}/{{ page.extra.featured }}"
+        alt="" />
+        <!--<span>Catégorie</span>-->
+        <h3>{{ page.title }}</h3>
+        <p>{{ page.description }}</p>
+      </article>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,256 @@
+@import '../variables.scss';
+
+main {
+  .home-hero {
+    background: rgb(231, 76, 60);
+    background: linear-gradient(
+      90deg,
+      rgba(231, 76, 60, 1) 0%,
+      rgba(231, 76, 60, 1) 50%,
+      rgba(242, 243, 244, 1) 50%
+    );
+    position: relative;
+
+    .overlay {
+      display: flex;
+      align-items: center;
+      padding: 5em 0;
+
+      & > div {
+        flex: 1;
+        padding: 1em;
+      }
+
+      .synopsis {
+        color: $white;
+
+        a {
+          color: $white;
+          border: 2px solid $white;
+          border-radius: 1em;
+          padding: 0.3em 0.7em;
+        }
+      }
+
+      .illustration {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  .last-posts {
+    .container {
+      padding: 3em 0;
+    }
+
+    .latest-posts {
+      .posts-list {
+        display: grid;
+        grid-template: auto / repeat(4, 1fr);
+        gap: 2em;
+        margin-bottom: 2em;
+
+        article {
+          border: 2px solid black;
+          padding: 1em;
+          color: black;
+          img {
+            display: block;
+            width: 100%;
+            height: 5em;
+            object-fit: cover;
+            margin-bottom: 1em;
+          }
+
+          h3 {
+            margin: 0;
+            margin-bottom: 0.5em;
+            font-family: 'Merriweather', serif;
+            font-weight: 600;
+          }
+
+          span {
+            font-size: 0.9em;
+
+            &::before {
+              content: '\2022';
+              display: inline-flex;
+              margin-right: 0.5em;
+            }
+
+            &:last-of-type::before {
+              content: none;
+            }
+
+            &:first-of-type::before {
+              content: '\2015';
+              display: inline-flex;
+              margin-right: 0.5em;
+            }
+          }
+
+          p {
+            font-size: 0.9em;
+            margin: 0;
+          }
+        }
+      }
+      .link {
+        display: flex;
+        justify-content: flex-end;
+        a {
+          border: 2px solid black;
+          color: black;
+          border-radius: 1em;
+          padding: 0.3em 0.7em;
+        }
+      }
+    }
+  }
+
+  .last-projects {
+    background-color: $primaryColor;
+    color: $white;
+    .container {
+      padding: 3em 0;
+    }
+    .projects-list {
+      display: grid;
+      grid-template: auto / repeat(4, 1fr);
+      gap: 2em;
+      margin-bottom: 2em;
+
+      article {
+        border: 2px solid $white;
+        padding: 1em;
+        color: $white;
+        img {
+          display: block;
+          width: 100%;
+          height: 5em;
+          object-fit: cover;
+          margin-bottom: 1em;
+        }
+
+        h3 {
+          margin: 0;
+          margin-bottom: 0.5em;
+          font-family: 'Merriweather', serif;
+          font-weight: 600;
+        }
+
+        span {
+          font-size: 0.9em;
+
+          &::before {
+            content: '\2022';
+            display: inline-flex;
+            margin-right: 0.5em;
+          }
+
+          &:last-of-type::before {
+            content: none;
+          }
+
+          &:first-of-type::before {
+            content: '\2015';
+            display: inline-flex;
+            margin-right: 0.5em;
+          }
+        }
+
+        p {
+          font-size: 0.9em;
+          margin: 0;
+        }
+      }
+    }
+
+    .link {
+      display: flex;
+      justify-content: flex-end;
+
+      a {
+        color: $white;
+        border: 2px solid $white;
+        border-radius: 1em;
+        padding: 0.3em 0.7em;
+      }
+    }
+  }
+
+  .skills-methodology {
+    .container {
+      display: flex;
+      & > div {
+        flex: 1;
+      }
+      & > div:first-of-type {
+        border-right: 2px solid $primaryColor;
+      }
+      & > div:last-of-type {
+        border-left: 2px solid $primaryColor;
+      }
+
+      h2 {
+        margin-bottom: 2em;
+      }
+    }
+
+    .main-skills {
+      padding: 3em 0;
+      padding-right: 2em;
+      .skills-grid {
+        display: grid;
+        grid-template: auto / repeat(3, 1fr);
+        row-gap: 2em;
+
+        .img-group {
+          display: flex;
+          justify-content: center;
+
+          img {
+            width: 30%;
+          }
+        }
+        h3 {
+          text-align: center;
+        }
+      }
+    }
+
+    .quality {
+      padding: 3em 0;
+      padding-left: 2em;
+      .quality-grid {
+        display: grid;
+        grid-template: auto / repeat(3, 1fr);
+        column-gap: 1em;
+
+        img {
+          width: 2.5em;
+          height: 2.5em;
+          display: block;
+          margin: auto;
+          filter: invert(49%) sepia(84%) saturate(4265%) hue-rotate(339deg)
+            brightness(95%) contrast(90%);
+        }
+
+        h3 {
+          text-align: center;
+        }
+
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

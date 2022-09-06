@@ -1,0 +1,158 @@
+{% extends "base.html" %} {% block content %}
+<section class="home-hero">
+  <div class="container overlay">
+    <div class="synopsis">
+      <h1>Développeur fullstack & mentor</h1>
+      <p>
+        J'aime développer des applications modernes et rapides à l'aide de
+        JavaScript depuis plus de 5 ans mais aussi à l'aide de Rust plus
+        récemment. Je suis constamment en train d'expérimenter de nouvelles
+        façons d'aborder la programmation, et j'affectionne tout
+        particulièrement le monde de l'open source. J'aime également partager
+        mes connaissances et aider les autres à apprendre et progresser dans ce
+        domaine souvent nébuleux qu'est la programmation.
+      </p>
+      <a href="#">Plus d'infos sur moi</a>
+    </div>
+    <div class="illustration">
+      <img src="img/code.svg" alt="" />
+    </div>
+  </div>
+</section>
+<section class="last-posts">
+  <div class="container">
+    <div class="latest-posts">
+      <h2>Mes derniers billets</h2>
+      <div class="posts-list">
+        {% set blog = get_section(path="blog/_index.md") %} {% for page in
+        blog.pages %}
+        <a href="{{ page.permalink | safe }}">
+          <article>
+            <img src="https://picsum.photos/1280/720" alt="" />
+            <!--<span>Catégorie</span>-->
+            <h3>{{ page.title }}</h3>
+            <p>{{ page.description }}</p>
+          </article>
+        </a>
+        {% endfor %}
+      </div>
+      <div class="link">
+        <a href="{{ get_url(path="@/blog/_index.md") }}">Voir tous les billets</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="last-projects">
+  <div class="container">
+    <h2>Derniers projets réalisés</h2>
+    <div class="projects-list">
+      {% set projects = get_section(path="projects/_index.md") %} {% for page in
+      projects.pages %}
+      <a href="{{ page.permalink | safe }}">
+        <article>
+          <img src="https://picsum.photos/1280/720" alt="" />
+          <!--<span>Catégorie</span>-->
+          <h3>{{ page.title }}</h3>
+          <p>{{ page.description }}</p>
+        </article>
+      </a>
+      {% endfor %}
+    </div>
+    <div class="link">
+      <a href="{{ get_url(path="@/projects/_index.md") }}">Voir tous les projets</a>
+    </div>
+  </div>
+</section>
+<section class="skills-methodology">
+  <div class="container">
+    <div class="main-skills">
+      <h2>Principales compétences</h2>
+      <div class="skills-grid">
+        <div>
+          <div class="img-group">
+            <img src="img/javascript.jpeg" alt="JavaScript" />
+            <img src="img/typescript.jpg" alt="TypeScript" />
+          </div>
+          <h3>JavaScript + TypeScript</h3>
+        </div>
+        <div>
+          <div class="img-group">
+            <img src="img/rust.png" alt="Rust" />
+          </div>
+          <h3>Rust</h3>
+        </div>
+        <div>
+          <div class="img-group">
+            <img src="img/html.png" alt="HTML5" />
+            <img src="img/css.png" alt="CSS3" />
+          </div>
+          <h3>HTML5 + CSS3</h3>
+        </div>
+        <div>
+          <div class="img-group">
+            <img src="img/nodejs.png" alt="NodeJS" />
+          </div>
+          <h3>NodeJS</h3>
+        </div>
+        <div>
+          <div class="img-group">
+            <img src="img/postgresql.png" alt="PostgreSQL" />
+          </div>
+          <h3>PostgreSQL</h3>
+        </div>
+        <div>
+          <div class="img-group">
+            <img src="img/git.png" alt="Git" />
+          </div>
+          <h3>Git</h3>
+        </div>
+      </div>
+    </div>
+    <div class="quality">
+      <h2>Travail de qualité</h2>
+      <div class="quality-grid">
+        <div>
+          <img src="img/icons/accessibility.svg" alt="" />
+          <h3>Accessibilité</h3>
+          <p>Pour des contenus accessibles à tous, sans contraintes</p>
+        </div>
+        <div>
+          <img src="img/icons/versioning.svg" alt="" />
+          <h3>Versionnage</h3>
+          <p>
+            Pour un meilleur suivi du travail, que ce soit seul ou en groupe.
+          </p>
+        </div>
+        <div>
+          <img src="img/icons/code-quality.svg" alt="" />
+          <h3>Propreté du code</h3>
+          <p>
+            Pour le respect des bonnes pratiques, la satisfaction d'un travail
+            propre et la maintenabilité garantie.
+          </p>
+        </div>
+        <div>
+          <img src="img/icons/tests.svg" alt="" />
+          <h3>Tests</h3>
+          <p>
+            Pour avoir confiance en son code et éliminer un maximum d'imprévus.
+          </p>
+        </div>
+        <div>
+          <img src="img/icons/performance.svg" alt="" />
+          <h3>Performance</h3>
+          <p>
+            Pour un confort d'utilisation mais surtout pour économiser nos
+            ressources.
+          </p>
+        </div>
+        <div>
+          <img src="img/icons/seo.svg" alt="" />
+          <h3>Référencement</h3>
+          <p>Pour se faire connaître et mieux remplir les objectifs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
