@@ -17,16 +17,21 @@
   <div class="projects-list">
     {% set projects = get_section(path="projects/_index.md") %} {% for page in
     projects.pages %}
-    <a href="{{ page.permalink | safe }}">
-      <article>
+    <article>
+      <div class="detail">
         <img src="{{ get_url(path="img/projects/") }}/{{ page.extra.featured }}"
         alt="" />
         <!--<span>Catégorie</span>-->
         <h3>{{ page.title }}</h3>
         <p>{{ page.description }}</p>
-      </article>
-    </a>
+      </div>
+      <div class="stack">{{ page.extra.stack }}</div>
+    </article>
     {% endfor %}
+    <article class="more">
+      <h3>... et bien d'autres</h3>
+      <p>depuis 2015</p>
+    </article>
   </div>
 </section>
 

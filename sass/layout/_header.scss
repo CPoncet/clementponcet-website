@@ -46,9 +46,12 @@ header {
     }
   }
 
+  a {
+    color: black;
+  }
+
   nav {
-    a {
-      color: black;
-    }
+    display: flex;
+    gap: 2em;
   }
 }

@@ -5,4 +5,5 @@ description = "Réalisation d'un site web pour un avocat."
 
 [extra]
 featured = "mangeotavocat.png"
+stack = "WordPress"
 +++

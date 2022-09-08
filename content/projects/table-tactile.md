@@ -1,11 +1,11 @@
 +++
-title = "Art-sur-Meurthe"
-date = 2022-01-01
-description = "Réalisation du site web de la ville d'Art-sur-Meurthe."
+title = "Kiosque pour table tactile"
+date = 2020-02-01
+description = "Application desktop permettant de lancer un kiosque interactif présentant des brochures PDF et des vidéos, le tout utilisable en mode tactile, sur une table de 55 pouces."
 
 [extra]
-featured = "artsurmeurthe.png"
-stack = "WordPress"
+featured = "table-tactile.jpg"
+stack = "RazzleJS (React)"
 +++
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget suscipit nibh. Phasellus ac arcu porta, congue risus nec, ullamcorper mi. Phasellus efficitur nunc purus. Sed ut laoreet massa. Integer sit amet dapibus dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut condimentum malesuada nulla scelerisque pulvinar. Sed efficitur efficitur aliquam. Aenean tempus risus eu faucibus blandit. Phasellus urna quam, eleifend non mauris venenatis, tristique interdum massa. Sed quis ante justo. Aenean efficitur sagittis mattis. Duis mollis magna sit amet ultrices faucibus. Ut egestas leo sit amet odio imperdiet feugiat. Phasellus aliquet diam tellus, in auctor metus lacinia at. Proin consequat, nulla vel bibendum commodo, ligula nunc venenatis neque, eget tincidunt purus lorem non nibh.

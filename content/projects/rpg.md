@@ -5,4 +5,5 @@ description = "Réalisation d'une application de jeu de rôle en ligne. Il s'agi
 
 [extra]
 featured = "rpg.jpg"
+stack = "NextJS + NestJS"
 +++
