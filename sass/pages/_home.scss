@@ -2,16 +2,16 @@
 
 main {
   .home-hero {
-    background: rgb(231, 76, 60);
+    background: rgb(192, 57, 43);
     background: linear-gradient(
       90deg,
-      rgba(231, 76, 60, 1) 0%,
-      rgba(231, 76, 60, 1) 50%,
+      rgba(192, 57, 43, 1) 0%,
+      rgba(192, 57, 43, 1) 50%,
       rgba(242, 243, 244, 1) 50%
     );
     position: relative;
     @media screen and (max-width: 768px) {
-      background: rgb(231, 76, 60);
+      background: rgb(192, 57, 43);
     }
 
     .overlay {
