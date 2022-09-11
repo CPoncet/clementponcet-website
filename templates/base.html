@@ -15,12 +15,7 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script src="//unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
-    <script src="https://unpkg.com/moment@2.29.4/min/moment-with-locales.min.js"></script>
-    <script>
-      moment.locale('fr');
-    </script>
+    <script defer src="{{ get_url(path="js/main.js") }}"></script>
   </head>
   <body>
     <header>
@@ -47,9 +42,5 @@
     <footer>
       <div class="container">Made with Rust & Zola</div>
     </footer>
-    <script>
-      feather.replace()
-    </script>
-    <script>hljs.highlightAll();</script>
   </body>
 </html>

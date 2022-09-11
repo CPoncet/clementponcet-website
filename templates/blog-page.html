@@ -9,11 +9,23 @@
 <section class="blog container post">{{ page.content | safe }}</section>
 
 <script>
-  console.log(moment('{{ page.date }}', 'YYYY-MM-DD').fromNow());
-  document.querySelector('.inner-hero .container span').innerText = moment(
-    '{{ page.date }}',
-    'YYYY-MM-DD'
-  ).fromNow();
+  const getMoment = new Promise((resolve, reject) => {
+    const momentScript = document.createElement('script');
+    document.body.appendChild(momentScript);
+    momentScript.onload = resolve;
+    momentScript.onerror = reject;
+    momentScript.async = true;
+    momentScript.src =
+      'https://unpkg.com/moment@2.29.4/min/moment-with-locales.min.js';
+  });
+
+  getMoment.then(() => {
+    moment.locale('fr');
+    document.querySelector('.inner-hero .container span').innerText = moment(
+      '{{ page.date }}',
+      'YYYY-MM-DD'
+    ).fromNow();
+  });
 </script>
 
 {% endblock content %}
