@@ -61,10 +61,102 @@ main {
           border: 2px solid black;
           padding: 1em;
           color: black;
+          .img-holder {
+            background: black;
+            margin-bottom: 1em;
+
+            img {
+              display: block;
+              width: 100%;
+              height: 8em;
+              object-fit: cover;
+            }
+          }
+
+          .img-holder.logo {
+            padding: 0 1em;
+
+            img {
+              object-fit: unset;
+            }
+          }
+
+          h3 {
+            margin: 0;
+            margin-bottom: 0.5em;
+            font-family: 'Merriweather', serif;
+            font-weight: 600;
+          }
+
+          span {
+            font-size: 0.9em;
+
+            &::before {
+              content: '\2022';
+              display: inline-flex;
+              margin-right: 0.5em;
+            }
+
+            &:last-of-type::before {
+              content: none;
+            }
+
+            &:first-of-type::before {
+              content: '\2015';
+              display: inline-flex;
+              margin-right: 0.5em;
+            }
+          }
+
+          p {
+            font-size: 0.9em;
+            margin: 0;
+            margin-bottom: 1em;
+          }
+
+          a {
+            color: black;
+          }
+        }
+      }
+      .link {
+        display: flex;
+        justify-content: flex-end;
+        a {
+          border: 2px solid black;
+          color: black;
+          border-radius: 1em;
+          padding: 0.3em 0.7em;
+        }
+      }
+    }
+  }
+
+  .last-projects {
+    background-color: $primaryColor;
+    color: $white;
+    .container {
+      padding: 3em 0;
+    }
+    .projects-list {
+      display: grid;
+      grid-template: auto / repeat(4, 1fr);
+      gap: 2em;
+      margin-bottom: 2em;
+
+      article {
+        border: 2px solid $white;
+        color: $white;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .detail {
+          padding: 1em;
           img {
             display: block;
             width: 100%;
-            height: 5em;
+            height: 8em;
             object-fit: cover;
             margin-bottom: 1em;
           }
@@ -101,74 +193,10 @@ main {
             margin: 0;
           }
         }
-      }
-      .link {
-        display: flex;
-        justify-content: flex-end;
-        a {
-          border: 2px solid black;
-          color: black;
-          border-radius: 1em;
-          padding: 0.3em 0.7em;
-        }
-      }
-    }
-  }
-
-  .last-projects {
-    background-color: $primaryColor;
-    color: $white;
-    .container {
-      padding: 3em 0;
-    }
-    .projects-list {
-      display: grid;
-      grid-template: auto / repeat(4, 1fr);
-      gap: 2em;
-      margin-bottom: 2em;
-
-      article {
-        border: 2px solid $white;
-        padding: 1em;
-        color: $white;
-        img {
-          display: block;
-          width: 100%;
-          height: 5em;
-          object-fit: cover;
-          margin-bottom: 1em;
-        }
-
-        h3 {
-          margin: 0;
-          margin-bottom: 0.5em;
-          font-family: 'Merriweather', serif;
-          font-weight: 600;
-        }
-
-        span {
-          font-size: 0.9em;
-
-          &::before {
-            content: '\2022';
-            display: inline-flex;
-            margin-right: 0.5em;
-          }
-
-          &:last-of-type::before {
-            content: none;
-          }
-
-          &:first-of-type::before {
-            content: '\2015';
-            display: inline-flex;
-            margin-right: 0.5em;
-          }
-        }
-
-        p {
-          font-size: 0.9em;
-          margin: 0;
+        .stack {
+          background: $white;
+          color: $primaryColor;
+          padding: 1em;
         }
       }
     }

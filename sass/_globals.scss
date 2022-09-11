@@ -17,6 +17,18 @@ a {
   display: inline-block;
 }
 
+h2 {
+  margin-top: 2em;
+}
+
+pre {
+  margin-bottom: 0;
+}
+
+pre code {
+  display: block;
+}
+
 p {
   font-family: 'Merriweather', serif;
   font-weight: 200;

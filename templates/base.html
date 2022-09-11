@@ -5,20 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clément Poncet - Développeur fullstack & mentor</title>
     <link rel="stylesheet" href="{{ get_url(path="style.css") }}" />
+    <link rel="stylesheet" href="{{ get_url(path="css/ally-dark.css") }}" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+    <script src="https://unpkg.com/moment@2.29.4/min/moment-with-locales.min.js"></script>
+    <script>
+      moment.locale('fr');
+    </script>
   </head>
   <body>
     <header>
       <div class="container">
-        <div class="logo-holder">
-          <div class="logo">&</div>
-          <div class="title">
-            <span>Clément Poncet</span>
-            <span class="desc">Développeur fullstack & mentor</span>
+        <a href="/">
+          <div class="logo-holder">
+            <div class="logo">&</div>
+            <div class="title">
+              <span>Clément Poncet</span>
+              <span class="desc">Développeur fullstack & mentor</span>
+            </div>
           </div>
-        </div>
+        </a>
 
         <nav>
           <a href="/">Accueil</a>
+          <a href="{{ get_url(path="@/blog/_index.md") }}">Blog</a>
+          <a href="{{ get_url(path="@/projects/_index.md") }}">Projets</a>
+          <a target="_blank" href="https://github.com/cponcet"><i data-feather="github"></i></a>
+          <a target="_blank" href="https://www.linkedin.com/in/cl%C3%A9ment-poncet-a1b08b89/"><i data-feather="linkedin"></i></a>
         </nav>
       </div>
     </header>
@@ -26,5 +39,9 @@
     <footer>
       <div class="container">Made with Rust & Zola</div>
     </footer>
+    <script>
+      feather.replace()
+    </script>
+    <script>hljs.highlightAll();</script>
   </body>
 </html>

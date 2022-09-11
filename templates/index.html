@@ -12,7 +12,6 @@
         mes connaissances et aider les autres à apprendre et progresser dans ce
         domaine souvent nébuleux qu'est la programmation.
       </p>
-      <a href="#">Plus d'infos sur moi</a>
     </div>
     <div class="illustration">
       <img src="img/code.svg" alt="" />
@@ -26,14 +25,17 @@
       <div class="posts-list">
         {% set blog = get_section(path="blog/_index.md") %} {% for page in
         blog.pages %}
-        <a href="{{ page.permalink | safe }}">
-          <article>
-            <img src="https://picsum.photos/1280/720" alt="" />
-            <!--<span>Catégorie</span>-->
-            <h3>{{ page.title }}</h3>
-            <p>{{ page.description }}</p>
-          </article>
-        </a>
+        {% if loop.index < 5 %}
+        <article>
+          <div class="img-holder {{ page.extra.imageType }}">
+            <img src="{{ get_url(path="img/blog/") }}/{{ page.extra.featured }}" alt="" />
+          </div>
+          <!--<span>Catégorie</span>-->
+          <h3>{{ page.title }}</h3>
+          <p>{{ page.description }}</p>
+          <a href="{{ page.permalink | safe }}">Lire la suite</a>
+        </article>
+        {% endif %}
         {% endfor %}
       </div>
       <div class="link">
@@ -48,14 +50,18 @@
     <div class="projects-list">
       {% set projects = get_section(path="projects/_index.md") %} {% for page in
       projects.pages %}
-      <a href="{{ page.permalink | safe }}">
+      {% if loop.index < 5 %}
         <article>
-          <img src="https://picsum.photos/1280/720" alt="" />
-          <!--<span>Catégorie</span>-->
-          <h3>{{ page.title }}</h3>
-          <p>{{ page.description }}</p>
+          <div class="detail">
+            <img src="{{ get_url(path="img/projects/") }}/{{ page.extra.featured }}"
+          alt="" />
+            <!--<span>Catégorie</span>-->
+            <h3>{{ page.title }}</h3>
+            <p>{{ page.description }}</p>
+          </div>
+          <div class="stack">{{ page.extra.stack }}</div>
         </article>
-      </a>
+      {% endif %}
       {% endfor %}
     </div>
     <div class="link">

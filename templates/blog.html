@@ -1,9 +1,34 @@
 {% extends "base.html" %} {% block content %}
-<h1>{{ section.title }}</h1>
 
-<ul>
-  {% for page in section.pages %}
-  <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
-  {% endfor %}
-</ul>
-{% endblock content %}
+<section class="inner-hero">
+  <div class="container">
+    <h1>Blog</h1>
+  </div>
+</section>
+
+<section class="blog container">
+  <h2>Mes billets</h2>
+  <p>
+    Plutôt que de parler de ce que tout le monde connaît déjà, je partage ici
+    mes découvertes et inspirations issues de ma veille quotidienne.
+  </p>
+  <div class="blog-list">
+    {% set blog = get_section(path="blog/_index.md") %} {% for page in
+    blog.pages %}
+    <article>
+      <div class="detail">
+        <div class="img-holder {{ page.extra.imageType }}">
+          <img src="{{ get_url(path="img/blog/") }}/{{ page.extra.featured }}"
+          alt="" />
+        </div>
+        <!--<span>Catégorie</span>-->
+        <h3>{{ page.title }}</h3>
+        <p>{{ page.description }}</p>
+        <a href="{{ page.permalink | safe }}">Lire la suite</a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+{% endblock %}
