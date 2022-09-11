@@ -61,12 +61,24 @@ main {
           border: 2px solid black;
           padding: 1em;
           color: black;
-          img {
-            display: block;
-            width: 100%;
-            height: 5em;
-            object-fit: cover;
+          .img-holder {
+            background: black;
             margin-bottom: 1em;
+
+            img {
+              display: block;
+              width: 100%;
+              height: 8em;
+              object-fit: cover;
+            }
+          }
+
+          .img-holder.logo {
+            padding: 0 1em;
+
+            img {
+              object-fit: unset;
+            }
           }
 
           h3 {
@@ -99,6 +111,11 @@ main {
           p {
             font-size: 0.9em;
             margin: 0;
+            margin-bottom: 1em;
+          }
+
+          a {
+            color: black;
           }
         }
       }

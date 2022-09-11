@@ -26,14 +26,15 @@
         {% set blog = get_section(path="blog/_index.md") %} {% for page in
         blog.pages %}
         {% if loop.index < 5 %}
-        <a href="{{ page.permalink | safe }}">
-          <article>
-            <img src="https://picsum.photos/1280/720" alt="" />
-            <!--<span>Catégorie</span>-->
-            <h3>{{ page.title }}</h3>
-            <p>{{ page.description }}</p>
-          </article>
-        </a>
+        <article>
+          <div class="img-holder {{ page.extra.imageType }}">
+            <img src="{{ get_url(path="img/blog/") }}/{{ page.extra.featured }}" alt="" />
+          </div>
+          <!--<span>Catégorie</span>-->
+          <h3>{{ page.title }}</h3>
+          <p>{{ page.description }}</p>
+          <a href="{{ page.permalink | safe }}">Lire la suite</a>
+        </article>
         {% endif %}
         {% endfor %}
       </div>
@@ -50,7 +51,6 @@
       {% set projects = get_section(path="projects/_index.md") %} {% for page in
       projects.pages %}
       {% if loop.index < 5 %}
-      <a href="{{ page.permalink | safe }}">
         <article>
           <div class="detail">
             <img src="{{ get_url(path="img/projects/") }}/{{ page.extra.featured }}"
@@ -61,7 +61,6 @@
           </div>
           <div class="stack">{{ page.extra.stack }}</div>
         </article>
-      </a>
       {% endif %}
       {% endfor %}
     </div>
