@@ -1,20 +1,21 @@
-.inner-hero {
-  background: $primaryColor;
-  color: $white;
-  padding: 3em 0;
-}
-
 .projects {
   color: black;
-  .container {
-    padding: 3em 0;
-  }
+  padding: 3em 2em;
+
   .projects-list {
     display: grid;
     grid-template: auto / repeat(4, 1fr);
     column-gap: 2em;
     row-gap: 2em;
     margin-bottom: 2em;
+
+    @media screen and (max-width: 1024px) {
+      grid-template: auto / repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-template: auto / auto;
+    }
 
     article.more {
       background: black;

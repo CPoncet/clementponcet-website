@@ -40,6 +40,17 @@ p {
   margin: auto;
 }
 
+.inner-hero {
+  background: $primaryColor;
+  color: $white;
+  padding: 3em 2em;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .container {
     max-width: 1024px;

@@ -1,14 +1,6 @@
-.inner-hero {
-  background: $primaryColor;
-  color: $white;
-  padding: 3em 0;
-}
-
 .blog {
   color: black;
-  .container {
-    padding: 3em 0;
-  }
+  padding: 3em 2em;
 
   .blog-list {
     display: grid;
@@ -16,6 +8,14 @@
     column-gap: 2em;
     row-gap: 2em;
     margin-bottom: 2em;
+
+    @media screen and (max-width: 1024px) {
+      grid-template: auto / repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-template: auto / auto;
+    }
 
     article {
       border: 2px solid black;
@@ -90,7 +90,7 @@
 }
 
 .blog.post {
-  padding: 4em 0;
+  padding: 4em 2em;
 
   .caption {
     margin-top: 0;
