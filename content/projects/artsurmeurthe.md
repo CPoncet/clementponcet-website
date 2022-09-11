@@ -4,7 +4,7 @@ date = 2022-01-01
 description = "Réalisation du site web de la ville d'Art-sur-Meurthe."
 
 [extra]
-featured = "artsurmeurthe.png"
+featured = "artsurmeurthe.webp"
 stack = "WordPress"
 +++
 

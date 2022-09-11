@@ -4,6 +4,6 @@ date = 2021-01-01
 description = "Amélioration d'un site web vitrine d'une grande école de management."
 
 [extra]
-featured = "ecole-management.jpg"
+featured = "ecole-management.webp"
 stack = "WordPress"
 +++

@@ -4,7 +4,7 @@ date = 2020-02-01
 description = "Application desktop permettant de lancer un kiosque interactif présentant des brochures PDF et des vidéos, le tout utilisable en mode tactile, sur une table de 55 pouces."
 
 [extra]
-featured = "table-tactile.jpg"
+featured = "table-tactile.webp"
 stack = "RazzleJS (React)"
 +++
 
