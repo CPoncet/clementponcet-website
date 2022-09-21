@@ -75,7 +75,7 @@ Côté Recoil, on a quelque chose de très simple, qui s'intègre plutôt bien �
 
 ### Zustand
 
-Zustand, quant à lui, est beaucoup plus direct dans son approche. Il ne vous abreuve pas de nouveau concept ou appellation (ici pas de _reducer_, _atom_ et autre _context_). Ici, il faut juste comprendre qu'on déclare nos données & méthodes pour modifier ces données au même endroit, puis on peut faire appel à ces différentes propriétés directement depuis nos composant grâce à un hook dédié.
+Zustand, quant à lui, est beaucoup plus direct dans son approche. Il ne vous abreuve pas de nouveau concept ou appellation (ici pas de _reducer_, _atom_ et autre _context_). Ici, il faut juste comprendre qu'on déclare nos données & méthodes pour modifier ces données au même endroit, puis on peut faire appel à ces différentes propriétés directement depuis nos composants grâce à un hook dédié.
 
 <pre>
   <code class="language-js">
