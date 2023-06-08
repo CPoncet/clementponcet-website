@@ -1,6 +1,6 @@
 +++
 title = "Ajouter Tailwind à Trunk sur un framework frontend Rust"
-date = 2022-09-11
+date = 2023-06-08
 description = "Un workflow de développement CSS confortable pour frameworks frontend Rust avec la puissance de Tailwind."
 
 [extra]
@@ -8,7 +8,7 @@ featured = "tailwindcss.svg"
 imageType = "logo"
 +++
 
-**Si comme moi vous êtes en pleine expérimentation de Rust côté frontend, via l'utilisation de frameworks tels que Leptos, Dioxus ou Yew, vous avec peut-être ressenti le besoin d'intégrer TailwindCSS, non sans difficulté. Je vous montre comment configurer tout ça.**
+**Si comme moi vous êtes en pleine expérimentation de Rust côté frontend, via l'utilisation de frameworks tels que Leptos, Dioxus ou Yew, vous avez peut-être ressenti le besoin d'intégrer TailwindCSS, non sans difficulté. Je vous montre comment configurer tout ça.**
 
 ## TailwindCSS oui, sans Node.js c'est mieux
 
@@ -75,7 +75,7 @@ Ensuite il n'y a plus qu'à ajouter le fichier CSS mouliné par Tailwind dans le
 
 <pre>
   <code class="language-html">
-    <link data-trunk rel="css" href="styles/main.css">
+    &lt;link data-trunk rel="css" href="styles/main.css"&gt;
   </code>
 </pre>
 
