@@ -23,7 +23,7 @@ L'intérêt d'un gestionnaire d'état est donc de pouvoir déclarer, modifier et
 
 Dans le domaine du _state management_, il y a deux anciens : Redux et MobX. Les deux répondent à la même problématique : proposer des structures de données flexibles, et accessibles à tout instant dans une application, pas forcément qu'en JS d'ailleurs. Les deux se différencient essentiellement sur leur utilisation. Certains aiment MobX, d'autres aiment Redux. A quel moment Redux a-t-il pris l'ascendant ? Sans doute parce que l'un de ses créateurs, Dan Abramov, était aussi à l'origine de Facebook et... React. Il paraissait donc logique de se lancer dans Redux quand on venait tout juste de se lancer dans React. Du moins, c'était le cas il y a plusieurs années.
 
-Le fonctionnement de ces "anciens" se base sur un système d'actions, qui déclenchent des _reducers_, et ces actions peuvent être déclenchées depuis n'importe quel endroit de notre application. De nouveaux concepts, qui étaient un peu indigestes au premier abord, surtout après avoir passé du temps à comprendre React. C'est pour cette raison que les "nouveaux" ont tenté d'apporter un peu de simplicité là-dedans.
+Le fonctionnement de ces "anciens" se base sur un système d'actions, qui déclenchent des _reducers_, et ces actions peuvent être déclenchées depuis n'importe quel endroit de notre application. De nouveaux concepts, qui étaient un peu indigestes au premier abord, surtout après avoir passé du temps à comprendre React. C'est pour cette raison que les "nouveaux" ont tenté d'apporter un peu de simplicité là-dedans !
 
 ## Les "nouveaux"
 
